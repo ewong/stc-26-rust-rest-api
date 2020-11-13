@@ -1,7 +1,4 @@
-extern crate diesel;
-
 use diesel::prelude::*;
-use diesel::PgConnection;
 use serde::Serialize;
 
 use crate::db::schema::posts;
@@ -97,17 +94,3 @@ impl Post {
         num_rows > 0
     }
 }
-
-// let results = dsl_posts
-//     .filter(published.eq(true))
-//     .limit(5)
-//     .load::<Post>(dbconn)
-//     .expect("Error loading posts");
-
-// println!("Displaying {} posts", results.len());
-// for post in results {
-//     println!("{}", post.title);
-//     println!("----------\n");
-//     println!("{}", post.body);
-// }
-// results

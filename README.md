@@ -16,10 +16,12 @@ b. run: cargo run => it will run the server on port 8080 (i.e. 127.0.0.1:8080)
 3. Testing example project.
 a. create: 
 curl -d '{"title": "Hello World", "body": "This article shows you how to wave hello to the world!"}' -H 'Content-Type: application/json' http://127.0.0.1:8080/post
+curl -d '{"title": "Hello Saturn", "body": "This article shows you how to wave hello to Saturn!"}' -H 'Content-Type: application/json' http://127.0.0.1:8080/post
 b. read all: 
 curl -G -H 'Content-Type: application/json' http://127.0.0.1:8080/post
 c. read one: 
 curl -G -H 'Content-Type: application/json' http://127.0.0.1:8080/post/hello-world
+curl -G -H 'Content-Type: application/json' http://127.0.0.1:8080/post/hello-saturn
 d. update: 
 curl -d '{"title": "Hello World blah", "body": "This article shows you how to wave hello to the world blah!", "published": true}' -H 'Content-Type: application/json' -X PUT http://127.0.0.1:8080/post/hello-world
 e. delete: 
